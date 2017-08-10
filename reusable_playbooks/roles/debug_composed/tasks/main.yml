@@ -1,0 +1,11 @@
+#
+# display composed variables
+#
+- name: "show value of suffix composed variable"
+  debug:
+    msg: "compose_optional_suffix:  {{ compose_optional_suffix }}"
+
+- name: "show value of prefix composed variable"
+  debug:
+    msg: "compose_optional_prefix:  {{ compose_optional_prefix }}"
+

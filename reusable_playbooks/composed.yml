@@ -1,0 +1,15 @@
+---
+#
+# Instead of one big playbook file, best practices are to make 
+# small reusable play files.
+#
+#
+- name: Show the composed variables via debug
+  hosts: example_group
+  # try to avoid using vars_files , lots of issues with reuse
+  # https://github.com/ansible/ansible/issues/28024
+  # vars_files:  
+  roles:
+    - role: debug_composed
+  tags:
+    - composed

@@ -1,0 +1,9 @@
+---
+# This shows you how to optionally compose strings so that you can e.g.
+# address issues with common string namespaces, create file paths, etc.
+# Examples of common string namespaces:
+#   - hostnames
+#   - docker container names on the same host or cluster
+composed_vars:
+  compose_optional_suffix: "compose_optional_suffix{{ suffix_from_inventory | default(omit) }}"
+  compose_optional_prefix: "{{ prefix_from_inventory | default(omit) }}compose_optional_prefix"
