@@ -1,5 +1,15 @@
----
 # A vars file you can read in with the playbook vars_files statement
+# Normally you don't want to do this if you can create the variables or compositions
+# of variables in an inventory file such as ./group_vars/all.yml.
+#
+# However, suppose you wanted to reuse these variables in a completely different
+# playbook directory?  Then you'd have copypasta of all this declaration .  So
+# that makes this the right place to put any variables with ALL the following 
+# scope requirements:
+#   - variables need to be the same across multiple playbooks (e.g. a root directory for data)
+#   - variables need to be the same across multiple play directories that have their own
+#     inventories.  (e.g. import-playbook ../another_playbook_dir/a_playbook.yml)
+# 
 yet_more_composed_vars:
   compose_optional_suffix: "compose_optional_suffix{{ suffix_from_inventory | default(omit) }}"
   compose_optional_prefix: "{{ prefix_from_inventory | default(omit) }}compose_optional_prefix"
