@@ -3,9 +3,9 @@
 #
 - name: "show value of suffix composed variable"
   debug:
-    msg: "compose_optional_suffix:  {{ compose_optional_suffix }}"
+    msg: "compose_optional_suffix:  {{ composed_vars.compose_optional_suffix }}"
 
 - name: "show value of prefix composed variable"
   debug:
-    msg: "compose_optional_prefix:  {{ compose_optional_prefix }}"
+    msg: "compose_optional_prefix:  {{ composed_vars.compose_optional_prefix }}"
 
