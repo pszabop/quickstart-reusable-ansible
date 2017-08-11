@@ -1,0 +1,6 @@
+---
+#
+# This playbook just imports other playbooks
+#
+- import_playbook: composed.yml
+- import_playbook: variable_vars_files.yml

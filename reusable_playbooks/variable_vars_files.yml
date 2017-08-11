@@ -1,0 +1,17 @@
+---
+#
+# Instead of one big playbook file, best practices are to make 
+# small reusable play files.
+#
+# THis playbook shows an issue with vars_files being a variable
+#
+- name: Show that there is an issue with a variable being used as the name of vars_files
+  hosts: example_group
+  # https://github.com/ansible/ansible/issues/28024
+  vars_files:  
+    - another_vars_file.yml
+    - "{{ a_vars_filename }}"
+  roles:
+    - role: debug_vars_from_file
+  tags:
+    - vars_files

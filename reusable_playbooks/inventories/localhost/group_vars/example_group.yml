@@ -3,5 +3,5 @@
 # you must set this or ansible tries to use SSH
 #
 ansible_connection: local
-suffix_from_inventory: "_suffix_from_group_vars"
-prefix_from_inventory: "prefix_from_group_vars_"
+suffix_from_inventory: "_suffix_from_localhost_group_vars"
+prefix_from_inventory: "prefix_from_localhost_group_vars_"
