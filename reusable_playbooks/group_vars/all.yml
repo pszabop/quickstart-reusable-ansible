@@ -7,4 +7,4 @@
 composed_vars:
   compose_optional_suffix: "compose_optional_suffix{{ suffix_from_inventory | default(omit) }}"
   compose_optional_prefix: "{{ prefix_from_inventory | default(omit) }}compose_optional_prefix"
-a_vars_filename: "a_vars_file.yml"
+a_vars_filename: "vault.yml"

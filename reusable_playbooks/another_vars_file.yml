@@ -1,4 +1,3 @@
----
 # A vars file you can read in with the playbook vars_files statement
 yet_another_more_composed_vars:
   compose_optional_suffix: "compose_optional_suffix{{ suffix_from_inventory | default(omit) }}"
